@@ -27,9 +27,8 @@ class UnixHttpServer extends Base
             ->setDefined('file')
             ->setAllowedTypes('file', 'string');
 
-        // TODO: octal vs. decimal value
         $resolver->setDefined('chmod')
-            ->setAllowedTypes('chmod', 'int');
+            ->setAllowedTypes('chmod', 'numeric');
 
         $resolver
             ->setDefined('chown')
